@@ -26,5 +26,7 @@ jQuery.loadScript(‘https://mathbiol.github.io/saarland2015/saarland.js')
 
 etc
 
+one more note … see how github is throwing SSL for free
+
 
 
