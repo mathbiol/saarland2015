@@ -22,7 +22,9 @@ which could be invoked directly through script tag loading via
 
 or 
 
-```jQuery.loadScript(‘https://mathbiol.github.io/saarland2015/saarland.js')```
+jQuery.loadScript(‘https://mathbiol.github.io/saarland2015/saarland.js')
+
+etc
 
 
 
