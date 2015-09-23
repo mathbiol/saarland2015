@@ -45,7 +45,7 @@ s = document.createElement('script')
 s.src="https://code.jquery.com/jquery-2.1.4.min.js"
 s.onload=function(){
     // lets get some data with jQuery
-    var dataURL='https://health.data.ny.gov/resource/u4ud-w55t.json?$limit=1000'
+    var dataURL='https://health.data.ny.gov/resource/u4ud-w55t.json?$limit=10000'
     jQuery.getJSON(dataURL).then(function(dt){
         saarland.dt=dt // keeping the data for reference
         // so now we have the data, lets do somethign with it
