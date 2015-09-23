@@ -28,5 +28,9 @@ etc
 
 one more note … see how github is throwing SSL for free
 
+Snapshot of my homework at the end of [the class](http://bit.ly/saarland2015):
+
+![https://mathbiol.github.io/saarland2015/Screen%20Shot%202015-09-23%20at%2011.58.04%20AM.png](https://mathbiol.github.io/saarland2015/Screen%20Shot%202015-09-23%20at%2011.58.04%20AM.png)
+
 
 
