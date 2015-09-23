@@ -19,6 +19,24 @@ saarland.unique=function(x){ // find unique elements of an Array
     })
     return Object.getOwnPropertyNames(y)
 }
+saarland.analysis=function(id){ // data analysis of parameter w id
+    var pName=id.slice(12)
+    //var dtp=[] // push the value for this parameter here
+    var dtp=saarland.dt.map(function(dti){
+        return dti[pName]
+    })
+    // Some statistics
+    // let's start by counting
+    var count={}
+    dtp.forEach(function(v){ // for each value of the parameter selected
+        if(!count[v]){ // making sure the coun is set for parameter p
+            count[v]=0
+        }
+        count[v]+=1
+    })
+    $('<pre>'+JSON.stringify(count,null,2)+'</pre>').appendTo(document.body)
+}
+
 
 
 
@@ -29,6 +47,7 @@ s.onload=function(){
     // lets get some data with jQuery
     var dataURL='https://health.data.ny.gov/resource/u4ud-w55t.json?$limit=1000'
     jQuery.getJSON(dataURL).then(function(dt){
+        saarland.dt=dt // keeping the data for reference
         // so now we have the data, lets do somethign with it
         $('<div id="dataAnalysis"><hr><h3>Analysisng some data</h3></div>').appendTo(document.body)
         $('<li>Retrieved '+dt.length+' reccords from <a href="'+dataURL+'" target="_blank">health.data.ny.gov/resource/u4ud-w55t</a></li>').appendTo(dataAnalysis)
@@ -45,6 +64,7 @@ s.onload=function(){
             console.log(p+'was selected for analysis')
             var id='Analysis of '+p
             $('<div id="'+id+'"><h3 style="color:maroon">Analysis of '+p+'</h3> </div>').appendTo(document.body)
+            saarland.analysis(id)
         }
         
 
